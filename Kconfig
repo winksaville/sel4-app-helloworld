@@ -12,6 +12,8 @@ menuconfig APP_HELLOWORLD
     select LIB_SEL4_PRINTF
     select LIB_SEL4_PUTCHAR
     select LIB_SEL4_STARTSTOP
+    select LIB_SEL4_STRING
+    select LIB_SEL4_ASSERT
     help
         An application that uses seL4_Printf to print "Hello, World!"
 
