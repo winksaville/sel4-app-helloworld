@@ -6,14 +6,18 @@
  * See "LICENSE_BSD2.txt" for details.
  */
 
-#include <sel4/printf.h>
+//#include <sel4/printf.h>
+#include <sel4/putchar.h>
 
 /**
  * No parameters are passed to main, the return
  * value is ignored and the program hangs.
  */
 int main(void) {
-  seL4_Printf("Hello, World!\n");
+  //seL4_Printf("Hello, World!\n");
+  sel4_PutChar('H');
+  sel4_PutChar('i');
+  sel4_PutChar('\n');
 
   return 0;
 }
