@@ -15,9 +15,9 @@
  */
 int main(void) {
   //seL4_Printf("Hello, World!\n");
-  sel4_PutChar('H');
-  sel4_PutChar('i');
-  sel4_PutChar('\n');
+  seL4_PutChar('H');
+  seL4_PutChar('i');
+  seL4_PutChar('\n');
 
   return 0;
 }
