@@ -2,15 +2,19 @@
 add_custom_command(
     OUTPUT ../../images/helloworld-image-ia32-pc99
     COMMAND echo "hi from helloworld"
-    COMMENT "Helloworld image")
+    COMMENT "Helloworld image"
+)
 
-add_custom_target(
-    helloworld-main ALL
-    SOURCES src/main.c)
+add_executable(helloworld-main src/main.c)
+target_link_libraries(helloworld-main
+    ${CMAKE_BINARY_DIR}/libs/libsel4putchar/libsel4putchar.a
+    ${CMAKE_BINARY_DIR}/libs/libsel4startstop/libsel4startstop.a
+    ${CMAKE_BINARY_DIR}/libs/libsel4/libsel4.a
+)
 
-add_dependencies(helloworld-main sel4_kernel sel4putchar)
+add_dependencies(helloworld-main
+    sel4_kernel
+    sel4putchar
+    sel4startstop
+)
 
-#add_custom_target(
-#    helloworld-image ALL
-#    DEPENDS helloworld-main ../../images/helloworld-image-ia
-#    COMMENT "libsel4 library")
