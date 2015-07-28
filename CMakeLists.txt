@@ -1,9 +1,9 @@
-add_executable(helloworld-main src/main.c)
+add_executable(helloworld src/main.c)
 
-target_link_libraries(helloworld-main
+target_link_libraries(helloworld
     libsel4
     libsel4printf
     libsel4startstop
 )
 
-add_dependencies(helloworld-main sel4_kernel)
+add_dependencies(helloworld sel4_kernel)
