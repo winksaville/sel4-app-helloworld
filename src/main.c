@@ -13,7 +13,7 @@
  * value is ignored and the program hangs.
  */
 int main(void) {
-  seL4_Printf("Hello, World!\n");
+    seL4_Printf("Hello, World!\n");
 
-  return 0;
+    return 0;
 }
