@@ -1,9 +1,13 @@
-add_executable(helloworld src/main.c)
+set(target "helloworld")
 
-target_link_libraries(helloworld
+add_executable(${target} src/main.c)
+
+target_link_libraries(${target}
     libsel4
     libsel4printf
     libsel4startstop
 )
 
-add_dependencies(helloworld sel4_kernel)
+AddRunTarget(${target})
+
+add_dependencies(${target} sel4_kernel)
