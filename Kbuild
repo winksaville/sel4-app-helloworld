@@ -8,6 +8,6 @@
 apps-$(CONFIG_APP_HELLOWORLD) += helloworld
 
 # Libraries needed
-helloworld-y = libsel4 libsel4startstop libsel4putchar libsel4string libsel4printf libsel4assert
+helloworld-y = libsel4 libsel4string libsel4startstop libsel4putchar libsel4printf libsel4assert
 
 helloworld: kernel_elf $(helloworld-y)
